@@ -1,0 +1,24 @@
+{
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start.dev": "nodemon",
+    "test": "jest --verbose=true --forceExit"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "redis": "^4.0.4"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "superagent": "^7.1.1",
+    "supertest": "^6.2.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

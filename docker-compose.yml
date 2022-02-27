@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    depends_on:
+      - redis
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
+    ports:
+      - "3000:3000"
+    links:
+      - redisdocker
+    environment:
+      - REDIS_URL=redis
+      - REDIS_PORT=6379
+  redis:
+    container_name: redis-container
+    image: "redis:latest"
