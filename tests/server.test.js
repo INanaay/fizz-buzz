@@ -2,10 +2,6 @@ const server = require('../server')
 const request = require("supertest");
 const redisClient = require('../src/redis')
 
-const emptyReqMock = () => {
-    return {}
-}
-
 const correctFizzBuzzMock = {
         int1: 2,
         int2: 5,
